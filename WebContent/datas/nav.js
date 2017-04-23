@@ -23,9 +23,9 @@ var navs = [{
 		"icon": "&#xe62a;",
 		"href": "messageServletList"
 	}, {
-		"title": "辅助性元素",
+		"title": "个人中心",
 		"icon": "&#xe60c;",
-		"href": "auxiliar.html"
+		"href": "personalIndex"
 	}]
 }, {
 	"title": "组件",

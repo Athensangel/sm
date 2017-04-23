@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sm.mapper.UserMapper">
+<resultMap type="User" id="userResult">
+		<result property="toid" column="toid"/>
+		<result property="userName" column="username"/>
+		<result property="passWord" column="password"/>
+		<result property="realName" column="realname"/>
+		<result property="sex" column="sex"/>
+		<result property="birthday" column="birthday"/>
+		<result property="email" column="email"/>
+		<result property="address" column="address"/>
+		<result property="telphone" column="telphone"/>
+		<result property="qq" column="qq"/>
+		<result property="salary" column="salary"/>
+		<result property="departId" column="departid"/>
+		<result property="role" column="role"/>
+		<result property="imageUrl" column="image_url"/>
+		
+	</resultMap>
+	
+	
+	<select id="findAllUsers"  resultMap="userResult">
+		select * from user
+	</select>
+	
+	<insert id="insertUser" parameterType="User">
+		insert into user(username,password,realname,sex,birthday,email,address,telphone,qq,salary,departid,role,image_url) values
+		values
+		(#{userName},#{passWord},#{realName},#{sex},#{birthday},#{email},#{address},#{telphone},#{qq},#{salary},#{departId},#{role},#{imageUrl})
+	</insert>
+	
+	<select id="findUserById"  parameterType="Integer" resultMap="userResult">
+		select * from user where toid = #{toid}
+	</select>
+	
+	<update id="updateUserById" parameterType="com.sm.entity.User">
+		update user  set 
+		username = #{userName},
+		password = #{passWord}, 
+		realname = #{realName},
+		sex = #{sex},
+		birthday = #{birthday},
+		email = #{email},
+		address = #{address},
+		telphone = #{telphone},
+		qq = #{qq},
+		salary = #{salary},
+		departid = #{departId},
+		role = #{role},
+		image_url = #{imageUrl} 
+		where toid=#{toId} 
+	</update>
+	
+	<delete id="delUserById" parameterType="Integer">
+		delete from user where toid=#{toid}
+	</delete>
+	
+	<select id="checkLogin" parameterType="User" resultMap="userResult">
+	   select * from user where 
+	   username = #{userName} and password = #{passWord}
+	</select>
+</mapper>

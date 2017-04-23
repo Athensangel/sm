@@ -14,9 +14,9 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="format-detection" content="telephone=no">
 
-		<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="css/global.css" media="all">
-		<link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/global.css" media="all">
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/font-awesome/css/font-awesome.min.css">
 
 	</head>
 
@@ -85,7 +85,7 @@
 					</ul>
 					<div class="layui-tab-content" style="min-height: 150px; padding: 5px 0 0 0;">
 						<div class="layui-tab-item layui-show">
-							<iframe src="main.html"></iframe>
+							<iframe src="${pageContext.request.contextPath}/main.jsp"></iframe>
 						</div>
 					</div>
 				</div>
@@ -115,9 +115,9 @@
 			</script>
 			<!--锁屏模板 end -->
 			
-			<script type="text/javascript" src="plugins/layui/layui.js"></script>
-			<script type="text/javascript" src="datas/nav.js"></script>
-			<script src="js/index.js"></script>
+			<script type="text/javascript" src="${pageContext.request.contextPath}/plugins/layui/layui.js"></script>
+			<script type="text/javascript" src="${pageContext.request.contextPath}/datas/nav.js"></script>
+			<script src="${pageContext.request.contextPath}/js/index.js"></script>
 			<script>
 				layui.use('layer', function() {
 					var $ = layui.jquery,

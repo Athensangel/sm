@@ -9,8 +9,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<title>登录</title>
-		<link rel="stylesheet" href="plugins/layui/css/layui.css" media="all" />
-		<link rel="stylesheet" href="css/login.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/login.css" />
 	</head>
 
 	<body class="beg-login-bg">
@@ -19,7 +19,7 @@
 				<h1>后台登录</h1>
 			</header>
 			<div class="beg-login-main">
-				<form action="${pageContext.request.contextPath}/UserServlet" class="layui-form" method="post">
+				<form action="${pageContext.request.contextPath}/user/checkLogin" class="layui-form" method="post">
 					<div class="layui-form-item">
 						<label class="beg-login-icon">
                         <i class="layui-icon">&#xe612;</i>

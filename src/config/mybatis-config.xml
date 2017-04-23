@@ -7,9 +7,11 @@
 		 <!--  <package name="com.sm.entity"/> -->
 		 <typeAlias alias="Department" type="com.sm.entity.Department"/>
 		 <typeAlias alias="Product" type="com.sm.entity.Product"/>
+		 <typeAlias alias="User" type="com.sm.entity.User"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="com/sm/mapper/ProductMapper.xml"/> 
 		<mapper resource="com/sm/mapper/DepartmentMapper.xml"/> 
+		<mapper resource="com/sm/mapper/UserMapper.xml"/> 
 	</mappers>
 </configuration>  
