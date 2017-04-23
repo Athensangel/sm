@@ -2,6 +2,9 @@ package com.sm.controller;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -13,8 +16,10 @@ import com.sm.service.ProductService;
 @Controller
 @RequestMapping("product")
 public class ProductController {
+	private static Logger logger = Logger.getLogger(ProductController.class);  
 	
-	@Autowired
+	//@Autowired
+	@Resource
 	private ProductService productService;
 	
 	
@@ -27,6 +32,7 @@ public class ProductController {
 	public String findAllProducts(ModelMap map){
 		List<Product> productList = productService.findAllProduct();
 		map.put("productList", productList);
+		logger.info("productList="+productList);    
 		return "views/product/productList";
 	}
 	

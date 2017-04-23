@@ -1,0 +1,38 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sm.mapper.DepartmentMapper">
+<!-- <resultMap type="Department" id="departmentResult">
+		<result property="toId" column="toid"/>
+		<result property="departmentName" column="departmentname"/>
+		<result property="managerId" column="managerid"/>
+		<result property="userRealName" column="price"/>
+</resultMap> -->
+	
+	<!-- 查询所有部门 -->
+	<select id="findAllDepartment" resultType="Department">
+		SELECT a.toid toId,a.departmentname AS departmentName,b.realname AS userRealName FROM department a 
+		LEFT JOIN `user` b on b.departid = a.toid
+	</select>
+	
+	<insert id="insertDepartment" parameterType="Department">
+			insert into department
+			(departmentname,managerid) 
+			values
+			(#{departmentName},#{managerId})
+	</insert>
+	
+	<!-- 通过部门id(toid)查询所有部门 -->
+	<select id="findDepartmentById"  parameterType="Integer" resultType="Department">
+		SELECT a.toid toId,a.departmentname AS departmentName,a.managerid managerId FROM department a 
+ 		WHERE a.toid = #{toid}
+	</select>
+	
+	<update id="updateDepartmentById" parameterType="com.sm.entity.Department">
+		update department  set departmentname = #{departmentName},managerid = #{managerId}  where toid=#{toId} 
+	</update>
+	
+	<delete id="delDepartmentById" parameterType="Integer">
+		delete from department where toid=#{toid}
+	</delete>
+</mapper>

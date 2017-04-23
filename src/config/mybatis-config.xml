@@ -4,9 +4,12 @@
 
 <configuration>
 	<typeAliases>
-		  <package name="com.sm.entity"/>
+		 <!--  <package name="com.sm.entity"/> -->
+		 <typeAlias alias="Department" type="com.sm.entity.Department"/>
+		 <typeAlias alias="Product" type="com.sm.entity.Product"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="com/sm/mapper/ProductMapper.xml"/> 
+		<mapper resource="com/sm/mapper/DepartmentMapper.xml"/> 
 	</mappers>
 </configuration>  

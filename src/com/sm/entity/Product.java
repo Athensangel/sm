@@ -7,9 +7,9 @@ package com.sm.entity;
 public class Product {
 	public Integer toId;		//主键通过Integer来接收
 	
-	public String productName;  //主键通过String来接收
+	public String productName;  //主键通过String来接收  产品名称
 	
-	public Float price;		    //主键通过Float来接收
+	public Float price;		    //主键通过Float来接收  单价
 
 	public Integer getToId() {
 		return toId;
@@ -33,5 +33,10 @@ public class Product {
 
 	public void setPrice(Float price) {
 		this.price = price;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [toId=" + toId + ", productName=" + productName + ", price=" + price + "]";
 	}
 }

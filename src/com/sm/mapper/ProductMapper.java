@@ -2,9 +2,11 @@ package com.sm.mapper;
 
 import java.util.List;
 
+import org.springframework.stereotype.Repository;
+
 import com.sm.entity.Product;
 
-
+@Repository 
 public interface ProductMapper {
 
 	public List<Product> findAllProduct();

@@ -1,11 +1,11 @@
 var navs = [{
-	"title": "基本元素",
+	"title": "OA管理系统",
 	"icon": "fa-cubes",
 	"spread": true,
 	"children": [{
 		"title": "部门管理",
 		"icon": "&#xe641;",
-		"href": "departmentServletList"
+		"href": "department/departmentList"
 	}, {
 		"title": "产品管理",
 		"icon": "&#xe63c;",

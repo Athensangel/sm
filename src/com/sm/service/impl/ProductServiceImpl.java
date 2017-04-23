@@ -12,8 +12,10 @@ import com.sm.mapper.ProductMapper;
 import com.sm.service.ProductService;
 
 @Transactional
-@Service
+//@Service
+@Service("productServiceImpl")
 public class ProductServiceImpl implements ProductService{
+	
 	
 	@Resource
 	private ProductMapper productMapper;
