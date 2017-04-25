@@ -111,4 +111,19 @@ public class User {
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
+	@Override
+	public String toString() {
+		return "User [toid=" + toid + ", userName=" + userName + ", passWord=" + passWord + ", realName=" + realName
+				+ ", sex=" + sex + ", birthday=" + birthday + ", email=" + email + ", address=" + address
+				+ ", telphone=" + telphone + ", qq=" + qq + ", salary=" + salary + ", departId=" + departId + ", role="
+				+ role + ", departmentName=" + departmentName + ", imageUrl=" + imageUrl + ", getToid()=" + getToid()
+				+ ", getUserName()=" + getUserName() + ", getPassWord()=" + getPassWord() + ", getRealName()="
+				+ getRealName() + ", getSex()=" + getSex() + ", getBirthday()=" + getBirthday() + ", getEmail()="
+				+ getEmail() + ", getAddress()=" + getAddress() + ", getTelphone()=" + getTelphone() + ", getQq()="
+				+ getQq() + ", getSalary()=" + getSalary() + ", getDepartId()=" + getDepartId() + ", getRole()="
+				+ getRole() + ", getDepartmentName()=" + getDepartmentName() + ", getImageUrl()=" + getImageUrl()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+	
 }

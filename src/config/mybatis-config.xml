@@ -8,10 +8,14 @@
 		 <typeAlias alias="Department" type="com.sm.entity.Department"/>
 		 <typeAlias alias="Product" type="com.sm.entity.Product"/>
 		 <typeAlias alias="User" type="com.sm.entity.User"/>
+		 <typeAlias alias="Message" type="com.sm.entity.Message"/>
+		 <typeAlias alias="Orders" type="com.sm.entity.Orders"/>
 	</typeAliases>
-	<mappers>
+	<mappers> <!-- 通过mapper接口加载映射文件 -->  
 		<mapper resource="com/sm/mapper/ProductMapper.xml"/> 
 		<mapper resource="com/sm/mapper/DepartmentMapper.xml"/> 
 		<mapper resource="com/sm/mapper/UserMapper.xml"/> 
+		<mapper resource="com/sm/mapper/MessageMapper.xml"/> 
+		<mapper resource="com/sm/mapper/OrdersMapper.xml"/> 
 	</mappers>
 </configuration>  

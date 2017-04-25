@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sm.mapper.MessageMapper">
+<resultMap type="Message" id="messageResult">
+		<result property="id" column="id"/>
+		<result property="fromId" column="from_id"/>
+		<result property="toId" column="to_id"/>
+		<result property="content" column="content"/>
+		<result property="isRead" column="isread"/>
+	</resultMap>
+	
+	
+	<select id="findAllMessage"  resultMap="messageResult">
+		select * from message
+	</select>
+	
+	<insert id="insertMessage" parameterType="Message">
+			insert into message
+			(from_id,to_id,content,isread) 
+			values
+			(#{fromId},#{toId},#{content},#{isRead})
+	</insert>
+	
+	<select id="findMessageById"  parameterType="Integer" resultMap="messageResult">
+		select * from message where id = #{id}
+	</select>
+	
+	<update id="updateMessageById" parameterType="com.sm.entity.Message">
+		update message  set from_id = #{fromId},to_id = #{toId},content = #{content},isread = #{isRead} where id=#{id} 
+	</update>
+	
+	<delete id="delMessageById" parameterType="Integer">
+		delete from message where id=#{id}
+	</delete>
+</mapper>
+

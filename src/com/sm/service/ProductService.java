@@ -15,6 +15,4 @@ public interface ProductService {
 	public Product queryProductById(Integer toid);//通过toId查找订单信息并做删除处理
 
 	public void updateProductById(Product product);//查找订单，并修改订单信息
-
-
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sm.mapper.OrdersMapper">
+<resultMap type="Orders" id="ordersResult">
+		<result property="toid" column="toid"/>
+		<result property="custName" column="custname"/>
+		<result property="custAddress" column="custaddress"/>
+		<result property="custPhone" column="custphone"/>
+		<result property="custEmail" column="custemail"/>
+		<result property="oderTime" column="odertime"/>
+		<result property="productId" column="productid"/>
+		<result property="productCount" column="productcount"/>
+		<result property="money" column="money"/>
+		<result property="createTime" column="createtime"/>
+		<result property="userId" column="userid"/>
+	<!-- 	<result property="userRealName" column="userRealName"/> -->
+</resultMap>
+	
+	<!-- 查询所有部门 -->
+	<select id="findAllOrders" resultMap="ordersResult">
+		select * from orders
+	</select>
+	
+	<insert id="insertOrders" parameterType="Orders">
+			insert into orders
+			(custname,custaddress,custphone,custemail,odertime,productid,productcount,money,createtime,userid) 
+			values
+			(#{custName},#{custAddress},#{custPhone},#{custEmail},#{oderTime},#{productId},#{productCount},#{money},#{createTime},#{userId})
+	</insert>
+	
+	<!-- 通过部门id(toid)查询所有部门 -->
+	<select id="findOrdersById"  parameterType="Integer" resultMap="ordersResult">
+		<!-- SELECT a.toid toId,a.Ordersname AS OrdersName,a.managerid managerId FROM Orders a 
+ 		WHERE a.toid = #{toid} -->
+ 			select * from orders where toid = #{toid}
+	</select>
+	
+	<update id="updateOrdersById" parameterType="com.sm.entity.Orders">
+		update orders  set custname = #{custName},custaddress = #{custAddress},custphone = #{custPhone},custemail = #{custEmail},odertime = #{oderTime},productid = #{productId},productcount = #{productCount},money = #{money},createtime = #{createTime},userid = #{userId}	where toid = #{toid} 
+	</update>
+	
+	<delete id="delOrdersById" parameterType="Integer">
+		delete from orders where toid = #{toid}
+	</delete>
+</mapper>

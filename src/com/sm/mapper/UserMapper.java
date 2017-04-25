@@ -23,8 +23,8 @@ public interface UserMapper {
 
 	public User findUserById(Integer toid);//查找
 
-	public void updateUserById(User user);
+	public void updateUserById(User user);//修改员工表字段
 
-	public void updateUserInfo(User user);
+	//public void updateUserInfo(User user);
 
 }

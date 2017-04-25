@@ -8,15 +8,13 @@ import com.sm.entity.User;
 public interface UserService {
 	public User checkUserLogin(User user);//登陆验证
 	
-	public List<User> findAllUsers();//遍历查询User表中的字段
-	
-	public void  saveUser(User user);//新增员工
-	
-	public void deletUserById(Integer toid);//通过toId查找员工信息并做删除处理
+	public List<User> findAllUser();//遍历查询orders表中的字段
 
-	public User queryUserById(Integer toid);// 通过toId查找员工信息并做删除处理
-	
-	public void  updateUserByID(User user);//查找员工，并修改员工信息
-	
-	public void updateUserInfo(User user);//更改员工信息
+	public void saveUser(User user);//新增订单
+
+	public void deletUserById(Integer toid);//通过toId查找订单信息并做删除处理
+
+	public User queryUserById(Integer toid);//通过toId查找订单信息并做删除处理
+
+	public void updateUserById(User user);//查找订单，并修改订单信息
 }

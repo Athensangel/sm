@@ -13,15 +13,15 @@ var navs = [{
 	}, {
 		"title": "员工管理",
 		"icon": "&#xe63c;",
-		"href": "userServletList"
+		"href": "user/userList"
 	}, {
 		"title": "订单管理",
 		"icon": "&#xe609;",
-		"href": "ordersServletList"
+		"href": "orders/ordersList"
 	}, {
 		"title": "消息管理",
 		"icon": "&#xe62a;",
-		"href": "messageServletList"
+		"href": "message/messageList"
 	}, {
 		"title": "个人中心",
 		"icon": "&#xe60c;",

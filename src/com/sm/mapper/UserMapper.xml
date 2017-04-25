@@ -51,7 +51,7 @@
 		departid = #{departId},
 		role = #{role},
 		image_url = #{imageUrl} 
-		where toid=#{toId} 
+		where toid=#{toid} 
 	</update>
 	
 	<delete id="delUserById" parameterType="Integer">
